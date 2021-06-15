@@ -1,0 +1,28 @@
+@import "./detail.css";
+body {
+    background-image: url("../image/back2.jpg");
+    margin: 5%;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    color: rgb(141, 180, 32);
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 2rem;
+}
+
+h2,
+h3 {
+    font-family: 'Cinzel', serif;
+    color: rgb(62, 119, 165);
+    font-size: 1.75rem;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+p {
+    text-align: center;
+}

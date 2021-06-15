@@ -1,0 +1,80 @@
+{
+  "authors": [
+    {
+      "id": 1,
+      "name": "Maya Angelou",
+      "email": "maya@maya.com"
+    },
+    {
+      "id": 2,
+      "name": "Mark Twin",
+      "email": "mark@mark.com"
+    },
+    {
+      "id": 3,
+      "name": "Grace Hopper",
+      "email": "grace@grace.com"
+    }
+  ],
+  "recipients": [
+    {
+      "id": 1,
+      "name": "Mark Twin",
+      "email": "mark@mark.com"
+    },
+    {
+      "id": 2,
+      "name": "Maya Angelou",
+      "email": "maya@maya.com"
+    },
+    {
+      "id": 3,
+      "name": "Grace Hopper",
+      "email": "grace@grace.com"
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "name": "Business"
+    },
+    {
+      "id": 2,
+      "name": "Friendly"
+    },
+    {
+      "id": 3,
+      "name": "Family"
+    },
+    {
+      "id": 4,
+      "name": "Congratulations"
+    },
+    {
+      "id": 5,
+      "name": "Condolences"
+    }
+  ],
+  "letters": [
+    {
+      "recipient": "please select a recipient",
+      "recipientEmail": "recipient@recipient.com",
+      "letterContent": "please write a letter",
+      "author": "please select an author",
+      "authorEmail": "author@author.com",
+      "topic": "please choose a topic",
+      "date": "Mon Jun 14 2021 16:17:36 GMT-0500 (Central Daylight Time)",
+      "id": 1
+    },
+    {
+      "recipient": "Mark Twin",
+      "recipientEmail": "mark@mark.com",
+      "letterContent": "One of my sorrows, when the summer ends, is that I must put off my cheery and comfortable white clothes and enter for the winter into the depressing captivity of the shapeless and degrading black ones. It is mid-October now, and the weather is growing cold up here in the New Hampshire hills, but it will not succeed in freezing me out of these white garments, for here the neighbors are few, and it is only of crowds that I am afraid.",
+      "author": "Maya Angelou",
+      "authorEmail": "maya@maya.com",
+      "topic": "Friendly, Condolences",
+      "date": "Tue Jun 15 2021 11:54:53 GMT-0500 (Central Daylight Time)",
+      "id": 2
+    }
+  ]
+}
