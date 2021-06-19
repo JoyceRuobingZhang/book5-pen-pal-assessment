@@ -2,22 +2,33 @@ import { getLetters, sendLetter, getAuthors, getRecipients } from "./dataAccess.
 
 export const Letter = () => {
     const letters = getLetters()
-        //     let html
-        //     if (letters.length === 0) {
-        //         html = "Please write a letter"
-        //     } else if (letters.length > 0) {
-        //         //const latestLetter = letters[letters.length - 1]
-        //         html = `Dear ${letters[letters.length - 1].recipient} `
-        //     }
 
     const LatestLetter = letters[letters.length - 1]
-    return `<div class="letter-body">
-    Dear <br> ${LatestLetter.recipient} (${LatestLetter.recipientEmail}),
-    <br>
+
+    const topicArr = LatestLetter.topic.split(",")
+    const topicList = topicArr.map(topic => {
+        return `
+        <div class="user-topic">
+            <div class="topic ${topic}">
+            ${topic}
+            </div>
+        </div>
+        `
+    }).join("")
+
+    return `
+    <div class="letter-body">
+    Dear <br> 
+    ${LatestLetter.recipient} (${LatestLetter.recipientEmail}),<br>
     ${LatestLetter.letterContent}<br>
-    Sincerely, <br> ${LatestLetter.author}(${LatestLetter.authorEmail})<br>
+    Sincerely, <br> 
+    ${LatestLetter.author}(${LatestLetter.authorEmail})<br>
     Sent on ${LatestLetter.date} <br>
-    <div class="user-topic">${LatestLetter.topic} </div> </div>
+
+    
+    ${topicList} 
+    
+
     
     `
 }
@@ -36,6 +47,7 @@ document.addEventListener("change", e => {
     }
 })
 
+
 document.addEventListener("click", e => {
     if (e.target.id === "send") {
         const theRecipientIndex = document.getElementById("recipient-options").options.selectedIndex
@@ -52,7 +64,7 @@ document.addEventListener("click", e => {
         const authors = getAuthors()
         userAuthorEmail = authors.find(author => { return author.id === theAuthorIndex }).email
 
-        userTopic = userTopicArr.join(",  ")
+        userTopic = userTopicArr.join(",")
 
         const dataToSendToAPI = {
             recipient: userRecipient,

@@ -7,7 +7,6 @@ export const Author = () => {
 
     html += authors.map(author => {
         return `
-        
         <option value="${author.id}">${author.name}</option>`
     }).join("")
 
